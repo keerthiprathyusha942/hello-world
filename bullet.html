@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+    <title>Form</title>
+    
+    <script type="text/javascript">
+
+          function addtext()
+          {
+             var name = document.myform.name.value;
+             var phone = document.myform.phone.value;
+             var course = document.myform.course.value;
+             var description = document.myform.description.value;
+
+
+             document.writeln("Thank you! You have just entered the following:");
+             document.writeln("<pre>");
+             document.writeln("Name    : " + name);
+             document.writeln("phone number     : " + phone);
+             document.writeln("Course : " + course);
+              document.writeln("Description : " + description);
+          }
+        </script>
+</head>
+
+<body>
+    <form name="myform">
+        <label for=" name">Name:</label><br>
+        <input type="text" name="name"><br>
+        <label for="phone">Phone number:</label><br>
+        <input type="text"  name="phone"><br>
+        <h4>Choice of course</h4>
+        <input type="radio" name="course" value="Bachelors">
+        <label for="course">Bachelors</label><br>
+        <input type="radio" name="course" value="Masters">
+        <label for="course">Masters</label><br>
+        <h4>Description </h4>
+        <textarea name="description" rows="10" cols="30"></textarea>
+        <h4>select the interesed subjects</h4>
+        <input type="checkbox" name="subject1" value="maths">
+        <label for="subject1"> maths</label><br>
+        <input type="checkbox" name="subject2" value="physics">
+        <label for="subject2"> physics</label><br>
+        <input type="checkbox" name="subject3" value="chemistry">
+        <label for="subject3"> chemistry</label>
+        
+        <!--<button type="submit" formtarget="_blank">Submit</a></button>-->
+        <input type="submit" value="Submit" onClick="addtext()">
+       <!-- <script>
+    var x = document.getElementById("frm1");
+    function myfun() {
+       for ( var i = 0; i < x.length; i++ ) {
+           document.write(x.elements[i].value);
+       }
+</script>-->
+   <!--<a href ="form.html">-->
+    </form>
+
+
+</body>
+
+</html>
+
+<!--action="https://website.com/action.php?" method="POST"-->
+<!--<form action="/action_page.php" method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <button type="submit">Submit</button>
+  <button type="submit" formtarget="_blank">Submit to a new window/tab</button>-->
